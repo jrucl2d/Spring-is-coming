@@ -9,7 +9,11 @@ public class MemberApp {
 
     public static void main(String[] args) {
         // 스프링 관련되지 않은 순수 자바 코드
-        MemberService memberService = new MemberServiceImpl();
+//        MemberService memberService = new MemberServiceImpl();
+
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
+
         Member member = new Member(1L, "memberA", Grade.VIP);
         memberService.join(member);
 
