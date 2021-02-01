@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 // 어플리케이션 실제 동작에 필요한 구현 객체를 생성하는 역할
-@Configuration
+//@Configuration // 바이트 코드 조작으로 완벽한 싱글톤 패턴을 보장하지만 configuration을 지우면 바이트 코드 조작이 이루어지지 않음 -> 싱글톤 X
 public class AppConfig {
     // 중복이 제거되었고, 역할과 구현 클래스가 한 눈에 들어온다.
     @Bean

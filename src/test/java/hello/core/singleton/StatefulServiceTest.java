@@ -21,10 +21,10 @@ class StatefulServiceTest {
         statefulService2.order("userA", 20000);
         
         // TreadA : 사용자 A가 주문 금액 조회
-        int price = statefulService1.getPrice();
-        System.out.println("price = " + price);
-
-        Assertions.assertThat(price).isEqualTo(20000); // 사용자 B가 공유되는 price의 값을 덮어 씌운다.
+//        int price = statefulService1.getPrice();
+//        System.out.println("price = " + price);
+//
+//        Assertions.assertThat(price).isEqualTo(20000); // 사용자 B가 공유되는 price의 값을 덮어 씌운다.
     }
 
 
