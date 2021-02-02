@@ -1,5 +1,6 @@
 package hello.core.order;
 
+import hello.core.annotation.MainDiscountPolicy;
 import hello.core.discount.DiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
@@ -16,7 +17,7 @@ public class OrderServiceImpl implements OrderService{
 //    private final DiscountPolicy discountPolicy = new RateDiscountPolicy(); // 추상 뿐 아니라 구현 클래스에도 의존하고 있다. -> OCP 위반
 
     private final MemberRepository memberRepository; // 철저히 DIP를 지키고 있다.
-    private final DiscountPolicy discountPolicy;
+    private final @MainDiscountPolicy DiscountPolicy discountPolicy;
     
 //    private  MemberRepository memberRepository;
 //    private DiscountPolicy discountPolicy;
