@@ -15,6 +15,15 @@ public class OrderServiceImpl implements OrderService{
 
     private final MemberRepository memberRepository; // 철저히 DIP를 지키고 있다.
     private final DiscountPolicy discountPolicy;
+    
+//    private  MemberRepository memberRepository;
+//    private DiscountPolicy discountPolicy;
+//
+//    @Autowired // 일반 메서드 의존관계 주입 가능
+//    public void init(MemberRepository memberRepository, DiscountPolicy discountPolicy){
+//        this.memberRepository = memberRepository;
+//        this.discountPolicy = discountPolicy;
+//    }
 
     @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
