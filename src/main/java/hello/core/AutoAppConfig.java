@@ -1,5 +1,6 @@
 package hello.core;
 
+import hello.core.annotation.MainDiscountPolicy;
 import hello.core.discount.DiscountPolicy;
 import hello.core.member.MemberRepository;
 import hello.core.order.OrderService;
@@ -23,6 +24,7 @@ public class AutoAppConfig {
     MemberRepository memberRepository;
 
     @Autowired
+    @MainDiscountPolicy
     DiscountPolicy discountPolicy;
 
     @Bean
